@@ -32,7 +32,7 @@ namespace Animals.Animals
             Console.Write("Podaj sposoby komunikacji: ");
             string communication = Console.ReadLine();
 
-            Mammals newMammal = new Mammals(1, name, description, habitat, diet, lifestyle, DateTime.Now, limbs, locomotion, communication);
+            Mammals newMammal = new Mammals(mammals.Count + 1, name, description, habitat, diet, lifestyle, DateTime.Now, limbs, locomotion, communication);
 
             mammals.Add(newMammal);
 
@@ -48,28 +48,28 @@ namespace Animals.Animals
         {
             Console.WriteLine("Dodawanie nowych ryb do atlasu");
 
-            Console.Write("Podaj nazwę ssaka: ");
+            Console.Write("Podaj nazwę ryby: ");
             string name = Console.ReadLine();
 
-            Console.Write("Podaj krótki opis ssaka: ");
+            Console.Write("Podaj krótki opis ryby: ");
             string description = Console.ReadLine();
 
-            Console.Write("Podaj typ siedliska ssaka: ");
+            Console.Write("Podaj typ siedliska ryby: ");
             string habitat = Console.ReadLine();
 
-            Console.Write("Podaj diete ssaka: ");
+            Console.Write("Podaj diete ryby: ");
             string diet = Console.ReadLine();
 
-            Console.Write("Podaj diete ssaka: ");
+            Console.Write("Podaj tryb życia ryby: ");
             string lifestyle = Console.ReadLine();
 
-            Console.Write("Podaj kształt ciała ryby:");
+            Console.Write("Podaj kształt ciała ryby: ");
             string shape = Console.ReadLine();
 
-            Console.Write("Podaj rodzaj płetw");
+            Console.Write("Podaj rodzaj płetw ryby: ");
             string fins = Console.ReadLine();
 
-            Console.Write("Podaj pokrycie ciała:");
+            Console.Write("Podaj pokrycie ciała ryby: ");
             string covering = Console.ReadLine();
 
 
@@ -90,28 +90,28 @@ namespace Animals.Animals
         {
             Console.WriteLine("Dodawanie nowych ptaków do atlasu");
 
-            Console.Write("Podaj nazwę ssaka: ");
+            Console.Write("Podaj nazwę ptaka: ");
             string name = Console.ReadLine();
 
-            Console.Write("Podaj krótki opis ssaka: ");
+            Console.Write("Podaj krótki opis ptaka: ");
             string description = Console.ReadLine();
 
-            Console.Write("Podaj typ siedliska ssaka: ");
+            Console.Write("Podaj typ siedliska ptaka: ");
             string habitat = Console.ReadLine();
 
-            Console.Write("Podaj diete ssaka: ");
+            Console.Write("Podaj diete ptaka: ");
             string diet = Console.ReadLine();
 
-            Console.Write("Podaj tryb życia ssaka:");
+            Console.Write("Podaj tryb życia ptaka: ");
             string lifestyle = Console.ReadLine();
 
-            Console.Write("Podaj sposób budowania gniazd:");
+            Console.Write("Podaj sposób budowania gniazd ptaka: ");
             string nest = Console.ReadLine();
 
-            Console.Write("Podaj kształt dzioba:");
+            Console.Write("Podaj kształt dzioba ptaka: ");
             string beak = Console.ReadLine();
 
-            Console.Write("Podaj rodzaj upierzenia:");
+            Console.Write("Podaj rodzaj upierzenia ptaka: ");
             string plumage = Console.ReadLine();
 
 

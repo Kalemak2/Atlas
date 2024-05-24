@@ -15,12 +15,14 @@ namespace Animals.Animals
 
     }
 
+
     internal class Mammals : Animals
     {
-        public string Type_of_Limbs { get; set; }
-        public string Locomotion_On_Land { get; set; }
-        public string Communication_Methods { get; set; }
+        public string TypeofLimbs { get; set; }
+        public string LocomotionOnLand { get; set; }
+        public string CommunicationMethods { get; set; }
 
+        public Mammals() { }
         public Mammals(int id, string name, string description, string habitat, string diet, string lifestyle, DateTime datecreated, string limbs, string locomotion, string communication)
         {
             Id = id;
@@ -30,9 +32,9 @@ namespace Animals.Animals
             Diet = diet;
             Lifestyle = lifestyle;
             CreationDate = datecreated;
-            Type_of_Limbs = limbs;
-            Locomotion_On_Land = locomotion;
-            Communication_Methods = communication;
+            TypeofLimbs = limbs;
+            LocomotionOnLand = locomotion;
+            CommunicationMethods = communication;
 
         }
     }
@@ -43,7 +45,7 @@ namespace Animals.Animals
         public string Type_Of_Fins { get; set; }
         public string Body_covering { get; set; }
 
-
+        public Fish() { }
         public Fish(int id, string name, string description, string habitat, string diet, string lifestyle, DateTime datecreated, string shape, string fins, string covering)
         {
             Id = id;
@@ -62,11 +64,12 @@ namespace Animals.Animals
 
     internal class Birds : Animals
     {
-
+        
         public string Nest_Building_Methods { get; set; }
         public string Beak_Shape { get; set; }
         public string Plumage_Type { get; set; }
 
+        public Birds() { }
         public Birds(int id, string name, string description, string habitat, string diet, string lifestyle, DateTime datecreated, string nest, string beak, string plumage)
         {
             Id = id;

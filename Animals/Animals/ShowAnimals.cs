@@ -25,10 +25,11 @@ namespace Animals.Animals
                     Console.WriteLine($"Siedlisko: {mammal.Habitat}");
                     Console.WriteLine($"Dieta: {mammal.Diet}");
                     Console.WriteLine($"Tryb życia: {mammal.Lifestyle}");
-                    Console.WriteLine($"Rodzaj kończyn: {mammal.Type_of_Limbs}");
-                    Console.WriteLine($"Sposób poruszania się po lądzie: {mammal.Locomotion_On_Land}");
-                    Console.WriteLine($"Sposoby komunikacji: {mammal.Communication_Methods}");
+                    Console.WriteLine($"Rodzaj kończyn: {mammal.TypeofLimbs}");
+                    Console.WriteLine($"Sposób poruszania się po lądzie: {mammal.LocomotionOnLand}");
+                    Console.WriteLine($"Sposoby komunikacji: {mammal.CommunicationMethods}");
                     Console.WriteLine($"Data utworzenia: {mammal.CreationDate}");
+                    Console.WriteLine("-----------------------");
                 }
             }
         }
@@ -53,6 +54,7 @@ namespace Animals.Animals
                     Console.WriteLine($"Rodzaj płetw: {fis.Type_Of_Fins}");
                     Console.WriteLine($"Pokrycie ciała: {fis.Body_covering}");
                     Console.WriteLine($"Data utworzenia: {fis.CreationDate}");
+                    Console.WriteLine("-----------------------");
                 }
             }
         }
@@ -77,6 +79,7 @@ namespace Animals.Animals
                     Console.WriteLine($"Sposób poruszania się po lądzie: {bird.Beak_Shape}");
                     Console.WriteLine($"Sposoby komunikacji: {bird.Plumage_Type}");
                     Console.WriteLine($"Data utworzenia: {bird.CreationDate}");
+                    Console.WriteLine("-----------------------");
                 }
             }
         }
