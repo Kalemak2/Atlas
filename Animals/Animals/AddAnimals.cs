@@ -32,7 +32,7 @@ namespace Animals.Animals
             Console.Write("Podaj sposoby komunikacji: ");
             string communication = Console.ReadLine();
 
-            Mammals newMammal = new Mammals(mammals.Count + 1, name, description, habitat, diet, lifestyle, DateTime.Now, limbs, locomotion, communication);
+            Mammals newMammal = new Mammals(1, name, description, habitat, diet, lifestyle, DateTime.Now, limbs, locomotion, communication);
 
             mammals.Add(newMammal);
 

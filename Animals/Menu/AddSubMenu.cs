@@ -20,18 +20,6 @@ namespace Animals.Menu
             List<Fish> fish;
             List<Birds> birds;
 
-            string mammalspath = @"mammals.json";
-            string json_mammals = File.ReadAllText(mammalspath);
-            mammals = JsonSerializer.Deserialize<List<Mammals>>(json_mammals);
-
-            string fishpath = "fish.json";
-            string json_fish = File.ReadAllText(fishpath);
-            fish = JsonSerializer.Deserialize<List<Fish>>(json_fish);
-
-            string birds_path = "birds.json";
-            string json_birds = File.ReadAllText(birds_path);
-            birds = JsonSerializer.Deserialize<List<Birds>>(json_birds);
-
             string[] keys = { "Dodaj ssaki", "Dodaj ptaki", "Dodaj ryby" };
             int number = 1;
             foreach (string key in keys)
@@ -46,14 +34,29 @@ namespace Animals.Menu
             {
 
                 case "1":
+
+                    string mammalspath = @"mammals.json";
+                    string json_mammals = File.ReadAllText(mammalspath);
+                    mammals = JsonSerializer.Deserialize<List<Mammals>>(json_mammals);
+
                     Console.Clear();
                     animals.AddMammals(mammals);
                     break;
                 case "2":
+
+                    string fishpath = "fish.json";
+                    string json_fish = File.ReadAllText(fishpath);
+                    fish = JsonSerializer.Deserialize<List<Fish>>(json_fish);
+
                     Console.Clear();
                     animals.AddFish(fish);
                     break;
                 case "3":
+
+                    string birds_path = "birds.json";
+                    string json_birds = File.ReadAllText(birds_path);
+                    birds = JsonSerializer.Deserialize<List<Birds>>(json_birds);
+
                     Console.Clear();
                     animals.AddBirds(birds);
                     break;

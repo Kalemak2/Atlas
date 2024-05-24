@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Diagnostics;
+using System.Text.Json.Serialization;
 
 namespace Animals.Animals
 {
@@ -12,6 +13,17 @@ namespace Animals.Animals
         public string Lifestyle { get; set; }
         public DateTime CreationDate { get; set; }
 
+        public Animals(int id, string name, string description, string habitat, string diet, string lifestyle,  DateTime datecreated)
+        {
+            Id = id;
+            Name = name;
+            Description = description;
+            Habitat = habitat;
+            Diet = diet;
+            Lifestyle = lifestyle;
+            CreationDate = datecreated;
+        }
+
     }
 
     internal class Mammals : Animals
@@ -20,18 +32,13 @@ namespace Animals.Animals
         public string Locomotion_On_Land { get; set; }
         public string Communication_Methods { get; set; }
 
-        public Mammals(int id, string name, string description, string habitat, string diet, string lifestyle, DateTime creationdate, string limbs, string locomotion, string communication)
+        public Mammals(int id, string name, string description, string habitat, string diet, string lifestyle, DateTime datecreated, string limbs, string locomotion, string communication)
+            : base(id, name , description, habitat, diet, lifestyle, datecreated)
         {
-            Id = id;
-            Name = name;
-            Description = description;
-            Habitat = habitat;
-            Diet = diet;
-            Lifestyle = lifestyle;
-            CreationDate = creationdate;
             Type_of_Limbs = limbs;
             Locomotion_On_Land = locomotion;
             Communication_Methods = communication;
+
         }
     }
     
@@ -42,18 +49,13 @@ namespace Animals.Animals
         public string Body_covering { get; set; }
 
 
-        public Fish( int id, string name, string description, string habitat, string diet, string lifestyle, DateTime creationdate, string shape, string fins, string covering)
+        public Fish(int id, string name, string description, string habitat, string diet, string lifestyle, DateTime datecreated, string shape, string fins, string covering)
+           : base(id, name, description, habitat, diet, lifestyle, datecreated)
         {
-            Id = id;
-            Name = name;
-            Description = description;
-            Habitat = habitat;
-            Diet = diet;
-            Lifestyle = lifestyle;
             Body_Shape = shape;
             Type_Of_Fins = fins;
             Body_covering = covering;
-            CreationDate = creationdate;
+
         }
     }
 
@@ -64,18 +66,13 @@ namespace Animals.Animals
         public string Beak_Shape { get; set; }
         public string Plumage_Type { get; set; }
 
-        public Birds(int id, string name, string description, string habitat, string diet, string lifestyle, DateTime creationdate, string nest, string beak, string plumage)
+        public Birds(int id, string name, string description, string habitat, string diet, string lifestyle, DateTime datecreated, string nest, string beak, string plumage)
+           : base(id, name, description, habitat, diet, lifestyle, datecreated)
         {
-            Id = id;
-            Name = name;
-            Description = description;
-            Habitat = habitat;
-            Diet = diet;
-            Lifestyle = lifestyle;
             Nest_Building_Methods = nest;
             Beak_Shape = beak;
             Plumage_Type = plumage;
-            CreationDate = creationdate;
+
         }
     }
 

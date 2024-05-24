@@ -18,18 +18,6 @@ namespace Animals.Menu
             List<Fish> fish;
             List<Birds> birds;
 
-            string mammals_path = @"mammals.json";
-            string json_mammals = File.ReadAllText(mammals_path);
-            mammals = JsonSerializer.Deserialize<List<Mammals>>(json_mammals);
-
-            string fish_path = @"fish.json";
-            string json_fish = File.ReadAllText(fish_path);
-            fish = JsonSerializer.Deserialize<List<Fish>>(json_fish);
-
-            string birds_path = @"birds.json";
-            string json_birds = File.ReadAllText(birds_path);
-            birds = JsonSerializer.Deserialize<List<Birds>>(json_birds);
-
             string[] keys = { "Pokaż ssaki", "Pokaż ptaki", "Pokaż ryby" };
             int number = 1;
             foreach (string key in keys)
@@ -44,15 +32,30 @@ namespace Animals.Menu
             {
                 case "1":
                     Console.Clear();
-                    
+
+                    string mammals_path = @"mammals.json";
+                    string json_mammals = File.ReadAllText(mammals_path);
+                    mammals = JsonSerializer.Deserialize<List<Mammals>>(json_mammals);
+
                     ShowAnimals.ShowMammals(mammals);
                     break;
                 case "2":
                     Console.Clear();
+
+                    string fish_path = @"fish.json";
+                    string json_fish = File.ReadAllText(fish_path);
+                    fish = JsonSerializer.Deserialize<List<Fish>>(json_fish);
+
                     ShowAnimals.ShowFish(fish);
                     break;
                 case "3":
                     Console.Clear();
+
+                    string birds_path = @"birds.json";
+                    string json_birds = File.ReadAllText(birds_path);
+                    birds = JsonSerializer.Deserialize<List<Birds>>(json_birds);
+
+
                     ShowAnimals.ShowBirds(birds);
                     break;
                 default:
